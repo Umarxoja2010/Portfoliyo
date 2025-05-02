@@ -23,6 +23,26 @@ padding-top: 600px;
      margin-bottom: 20px;
    
   }
+  .wiev_div{
+    display: flex;
+    align-items: center;
+gap: 20px;
+  }
+  .wiev_div a{
+    text-decoration: none;
+  }
+  .about button{
+    display: block;
+border-radius: 10px;
+border: 0.5px solid white;
+color: white;
+font-size: 15px;
+width: 100px;
+height: 40px;
+background-color: rgba(0, 0, 0, 0.5);
+cursor: pointer;
+box-shadow:5px 5px 5px 5px rgba(0, 0, 0, 0.616) ;
+  }
   @keyframes moveGradient {
     0% {
       background-position: 0% 50%;
@@ -71,4 +91,58 @@ padding-top: 600px;
     width: 30%;
     margin-bottom: 50px;
 
+  }
+  .about_content p{
+    width: 300px;
+  }
+  .about_img img{
+    border-radius: 30% 10%;
+width: 400px;
+height: 300px;
+    border: 2px solid white;
+  }
+  @media (max-width:1000px) {
+    .about h3{
+      font-size: 35px;
+    }
+    .about h2{
+      font-size: 35px;
+    }
+  }
+  @media (max-width:800px) {
+  .about_img img{
+    width: 350px;
+    height: 250px;
+  }
+  }
+  @media (max-width:740px) {
+  .about h3{
+    font-size: 28px;
+  }
+  .about p{
+    width: 200px;
+  }
+  }
+  @media (max-width:630px) {
+  .about_img img{
+    width: 300px;
+    height: 200px;
+  }
+
+  }
+  @media (max-width:580px) {
+  .about_wrapper{
+    flex-direction: column;
+  }
+  .about_content{
+    order: 1;
+  }
+  .about h3{
+    width: 100%;
+margin-top: 50px;
+  }
+  .about p{
+    width: 100%;
+    margin-bottom: 10px;
+  }
   }

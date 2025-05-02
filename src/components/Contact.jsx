@@ -20,6 +20,7 @@ function Contact() {
             </div>
             <div className="contact_qator">
                 <img src={veb} alt="" />
+                
                 <span>Frontend  Devoloper</span>
             </div>
             <div className="contact_qator">

@@ -7,16 +7,16 @@ function Projects() {
         <h2>My projects</h2>
         <div className="pro_wrapper">
             <div className="pro_card">
-                <img src="" alt="" />              
+                <img src="r" alt="" />              
             </div>
             <div className="pro_card">
-                <img src="" alt="" />              
+                <img src="r" alt="" />              
             </div>
             <div className="pro_card">
-                <img src="" alt="" />              
+                <img src="r" alt="" />              
             </div>
             <div className="pro_card">
-                <img src="" alt="" />              
+                <img src="j" alt="" />              
             </div>
         </div>
       </div>

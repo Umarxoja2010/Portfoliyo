@@ -173,3 +173,8 @@ font-size: 25px;
         display: block;
     }
 }
+@media (max-width:400px) {
+.header a h3{
+    font-size: 15px;
+}
+}

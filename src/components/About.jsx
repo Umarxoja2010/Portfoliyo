@@ -11,9 +11,18 @@ function About() {
                 Mamarasulov <br /> Umarxo'ja</h3>
                 <p>I am a Frontend Developer with experience working with qualified people on various interesting projects (e-commerce, education) since 2024. My personal websites are built mainly with React JS, HTML, CSS (SCSS), JavaScript.
                 </p>
-
+                <div className="wiev_div">
+                  <a href="#projec">
+<button>View projects</button>
+                  </a>
+                  <a href="https://drive.google.com/file/d/1FhEIIyBD7twPJhGFipK_nkoZsGnekaRw/view?usp=drive_link">
+<button>View CV</button>
+                  </a>
+                </div>
             </div>
-         
+         <div className="about_img">
+          <img src="" alt="" />
+         </div>
         </div>
       </div>
     </div>

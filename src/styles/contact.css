@@ -42,3 +42,34 @@ margin-left: 10px;
 margin-bottom: 50px;
 margin-top: 10px;
 }
+@media (max-width:800px) {
+    .contact_wrapper{
+    width: 33%;
+
+    }
+}
+@media (max-width:650px) {
+.contact_wrapper{
+    width: 43%;
+}
+}
+@media (max-width:600px) {
+.contact_wrapper{
+    width: 60%;
+}
+}
+@media (max-width:550px) {
+    .contact_wrapper{
+        width: 70%;
+    }
+}
+@media (max-width:510px) {
+    .contact_wrapper{
+        width: 100%;
+    }
+}
+@media (max-width:450px) {
+.contact_wrapper span{
+font-size: 15px;
+}
+}

@@ -11,6 +11,7 @@ function HomePage() {
       <About/>
       <Projects/>
       <Contact/>
+<h1 className='by'>      Created By Umarxo'ja Mamarasulov |  2025 All rights reserved.</h1>
     </div>
   )
 }
