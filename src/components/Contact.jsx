@@ -3,7 +3,7 @@ import "../styles/contact.css"
 import location from "../images/pin.png"
 import telefon from "../images/telephone-symbol-button.png"
 import telegram from "../images/telegram.png"
-import gmail from "../images/mail.png"
+import gmail from "../images/mail (1).png"
 import shaxs from "../images/businessman.png"
 import veb from "../images/web-programming.png"
 

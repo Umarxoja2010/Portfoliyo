@@ -156,6 +156,12 @@ font-size: 25px;
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.header.scrolled {
+    background-color: rgba(0, 24, 77, 0.85); 
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+width: 100%;
+}
 @media (max-width:750px) {
     .header_logo a h3{
      font-size: 20px;   

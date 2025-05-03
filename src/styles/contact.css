@@ -2,9 +2,10 @@
     background-color: white !important;
 }
 .contact h3{
+    color: black;
      text-align: center;
      font-size: 40px;
-     margin-top: 15px;
+padding-top: 25px;
 margin-bottom: 15px;
     }
 .contact img{
@@ -25,10 +26,14 @@ text-align: start;
 }
 .contact_qator span{
     font-size: 25px;
+    color: black;
+
 }
 .contact_qator span{
     margin-top: 5px;
     margin-bottom: 5px;
+    color: black;
+
 }
 .anker{
     display: flex;
