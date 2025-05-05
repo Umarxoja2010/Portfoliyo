@@ -67,8 +67,8 @@ function Header() {
       </div>
       <div className="header_wrapper">
         <div className="header_logo">
-          <a href="#head">
-            <h3>Welcome</h3>
+          <a href="#her">
+            <h3>UM</h3>
           </a>
         </div>
         <div className="header_contant">

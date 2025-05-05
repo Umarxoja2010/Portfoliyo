@@ -18,7 +18,7 @@
   
   .skil-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     justify-items: center;
     align-items: center;
@@ -29,7 +29,7 @@
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-    width: 100px;
+    width: 200px;
     transition: transform 0.2s ease-in-out;
     cursor: default;
   }
@@ -54,10 +54,10 @@
   /* Kichik qurilmalarga moslashuvchanlik */
   @media (max-width: 600px) {
     .skil-grid {
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
     .skil-item {
-      width: 80px;
+      width: 180px;
       padding: 0.75rem;
     }
     .skil-icon {
@@ -65,5 +65,23 @@
     }
     .skil-name {
       font-size: 1rem;
+    }
+  }
+  @media (max-width: 450px) {
+  .skil-grid{
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+  }
+  .skil-item {
+    width: 140px;
+  }
+  }
+  @media (max-width: 370px) {
+    .skil-grid{
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  
+    }
+    .skil-item {
+      width: 100px;
     }
   }

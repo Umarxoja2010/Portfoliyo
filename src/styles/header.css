@@ -17,19 +17,9 @@
     text-decoration: none;
 }
 .header_logo  h3 {
-    font-weight: 700;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-size: 300% 100%;
-      color: #0000;;
-      display: inline-block;
-      font-family: var(--font-family);
-      font-weight: 400;
-      text-decoration: none;
       text-transform: uppercase;
-      white-space: nowrap;
-text-decoration: none;
 font-size: 30px;
+font-family:'Times New Roman', Times, serif;
 color: black;
 }
 .header_logo a{
