@@ -1,66 +1,251 @@
-import React from 'react'
-import "../styles/contact.css"
-import location from "../images/pin.png"
-import telefon from "../images/telephone-symbol-button.png"
-import telegram from "../images/telegram.png"
-import gmail from "../images/mail (1).png"
-import shaxs from "../images/businessman.png"
-import veb from "../images/web-programming.png"
+import React, { useState, useEffect } from 'react';
 
+const styles = {
+  body: {
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    background: '#000000',
+    color: '#e0e0e0',
+    margin: 0,
+    padding: 0,
+    minHeight: '100vh',
+  },
+  wrapper: {
+    display: 'flex',
+    maxWidth: 700,
+    width: '90%',
+    borderRadius: 12,
+    overflow: 'hidden',
+    boxShadow: '0 10px 25px rgba(255,255,255,0.1)',
+    background: '#1a1a1a',
+  },
+  container: {
+    flex: 1,
+    padding: '2rem',
+    textAlign: 'left',
+  },
+  hh1: {
+    textAlign: 'center',
+    marginTop: '20px',
+    marginBottom: '10px',
+  },
+  containerLeft: {
+    borderRight: '1px solid #333',
+  },
+  h1: {
+    margin: '0 0 0.3rem 0',
+    fontSize: '1.8rem',
+    color: '#4aa3ff',
+  },
+  h2: {
+    margin: '0 0 1rem 0',
+    fontWeight: 'normal',
+    fontSize: '1.3rem',
+    color: '#a0a0a0',
+  },
+  info: {
+    fontSize: '1rem',
+    margin: '1rem 0 2rem 0',
+    color: '#ccc',
+  },
+  infoItem: {
+    marginBottom: '1rem',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  icon: {
+    fontSize: '1.3rem',
+    marginRight: '0.8rem',
+    color: '#4aa3ff',
+    flexShrink: 0,
+  },
+  link: {
+    color: '#4aa3ff',
+    textDecoration: 'none',
+  },
+  linkHover: {
+    textDecoration: 'underline',
+  },
+  feedbackSection: {
+    color: '#e0e0e0',
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  label: {
+    marginBottom: '0.5rem',
+    fontWeight: 600,
+  },
+  textarea: {
+    resize: 'vertical',
+    minHeight: 100,
+    padding: '0.7rem',
+    borderRadius: 6,
+    border: 'none',
+    fontSize: '1rem',
+    fontFamily: 'inherit',
+    backgroundColor: '#222',
+    color: '#e0e0e0',
+    outline: 'none',
+  },
+  button: {
+    marginTop: '1rem',
+    padding: '0.7rem',
+    background: '#4aa3ff',
+    border: 'none',
+    borderRadius: 6,
+    color: 'black',
+    fontWeight: 700,
+    fontSize: '1rem',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s ease',
+  },
+  buttonHover: {
+    background: '#1a73e8',
+  },
+  thankYouMessage: {
+    marginTop: '1rem',
+    color: '#6cf26c',
+    fontWeight: 600,
+  },
+};
 
-function Contact() {
+const Contact = () => {
+  const [feedback, setFeedback] = useState('');
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [isButtonHover, setIsButtonHover] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (feedback.trim().length === 0) return;
+    setShowThankYou(true);
+    setFeedback('');
+    setTimeout(() => {
+      setShowThankYou(false);
+    }, 5000);
+  };
+
+  const isMobile = windowWidth < 700;
+  const isMoobile = windowWidth < 540;
+  const siMoobile = windowWidth < 360;
+
   return (
-    <div id='conta' className='contact'>
-      <div className="container">
-        <h3>Contact me</h3>
-        <div className="contact_wrapper">
-            <div className="contact_qator">
-                <img src={shaxs} alt="" />
-                <span>Umarxo'ja Mamarasulov</span>
-            </div>
-            <div className="contact_qator">
-                <img src={veb} alt="" />
-                
-                <span>Frontend  Devoloper</span>
-            </div>
-            <div className="contact_qator">
-                <img src={location} alt="" />
-                <span>Uzbekistan,Sirdaryo</span>
-            </div>
-            <div className="contact_qator">
-                <img src={gmail} alt="" />
-                <span>umarxojamamarasulov@gmail.com</span>
-            </div>
-            <div className="contact_qator">
-                <img src={telefon} alt="" />
-                <span>+998970641310</span>
-            </div>
-        </div>
-        <h3>
-        Follow me
-        </h3>
-        <div className='anker'>
+    <div style={styles.body}>
+      <h1 style={styles.hh1}>Contact me</h1>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <main
+          style={{
+            ...styles.wrapper,
+            ...(isMobile ? {  
+flexDirection: "column",
+width: '60%'
+            } : {}),
+            ...(isMoobile ? {  
+width: '90%',
 
-        <a href="a">
-        <img src={telegram} alt="" />
-        </a>
-        <a href="a">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-github w-5 h-5 text-gray-400 group-hover:text-white transition-colors">
-            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
-            <path d="M9 18c-4.51 2-5-2-7-2"></path>
-          </svg>
-        </a>
-        <a href="a">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-linkedin w-5 h-5 text-gray-400 group-hover:text-white transition-colors">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect width="4" height="12" x="2" y="9"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-        </a>
+            } : {}),
+          }}
+          aria-label="Kontakt va fikr bildirish formasi"
+        >
+          <section
+            style={{
+              ...styles.container,
+    ...(siMoobile ? { textAlign: 'center', borderBottom: '1px solid #333', padding: "0" } : {}),
+            }}
+            aria-labelledby="contact-header"
+          >
+            <h1 id="contact-header" style={styles.h1}>Umarxo&apos;ja Mamarasulov</h1>
+            <h2 style={styles.h2}>Frontend Developer</h2>
+            <div style={styles.info} aria-label="Kontakt ma&apos;lumotlari">
+              <div style={styles.infoItem}>
+                <span style={styles.icon} aria-hidden="true">📍</span>
+                <span>Uzbekistan, Sirdaryo</span>
+              </div>
+              <div style={styles.infoItem}>
+                <span style={styles.icon} aria-hidden="true">✉️</span>
+                <a
+                  href="mailto:umarxojamamarasulov@gmail.com"
+                  aria-label="Email yozish"
+                  style={styles.link}
+                >
+                  umarxojamamarasulov@gmail.com
+                </a>
+              </div>
+              <div style={styles.infoItem}>
+                <span style={styles.icon} aria-hidden="true">📞</span>
+                <a
+                  href="tel:+998970641310"
+                  aria-label="Phone number"
+                  style={styles.link}
+                >
+                  +998 97 064 13 10
+                </a>
+              </div>
+            </div>
+          </section>
+          <section
+            style={{
+              ...styles.container,
+              ...(isMobile ? { textAlign: 'center' } : {}),
+            }}
+            aria-labelledby="feedback-header"
+          >
+            <h2 id="feedback-header" style={{ ...styles.h2, color: '#4aa3ff' }}>comment</h2>
+            <form
+              id="feedback-form"
+              aria-describedby="feedback-desc"
+              onSubmit={handleSubmit}
+              style={styles.form}
+            >
+              <label htmlFor="feedback-textarea" style={styles.label}>Your feedback</label>
+              <textarea
+                id="feedback-textarea"
+                name="feedback"
+                placeholder="Write your feedback.."
+                required
+                aria-required="true"
+                style={styles.textarea}
+                value={feedback}
+                onChange={(e) => setFeedback(e.target.value)}
+                onFocus={(e) => (e.target.style.outline = '2px solid #4aa3ff')}
+                onBlur={(e) => (e.target.style.outline = 'none')}
+              />
+              <button
+                type="submit"
+                style={{
+                  ...styles.button,
+                  ...(isButtonHover ? { background: '#1a73e8' } : {}),
+                }}
+                onMouseEnter={() => setIsButtonHover(true)}
+                onMouseLeave={() => setIsButtonHover(false)}
+              >
+                Submit
+              </button>
+              {showThankYou && (
+                <div
+                  id="thank-you"
+                  className="thank-you-message"
+                  role="alert"
+                  aria-live="polite"
+                  style={styles.thankYouMessage}
+                >
+                  Thank you for your feedback!
+                </div>
+              )}
+            </form>
+          </section>
+        </main>
       </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -11,7 +11,6 @@ function Hero() {
             <span className=' h1spanhero'>Frontend</span><br />
             Developer
           </h1>
-          <h3 className='studen'>Student</h3>
           <div>
           <span className='btnspanhero'>HTML</span>
           <span className='btnspanhero'>CSS</span>

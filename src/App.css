@@ -4,7 +4,8 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: rgba(99, 102, 241, .3) rgba(12, 5, 53, .356);
+    scrollbar-color: rgb(33, 202, 154) rgb(3, 71, 71);
+    
 }
 .container{
     max-width: 1400px;
@@ -39,4 +40,14 @@ body {
     background-color: black;
     font-size: 20px;
     text-align: center;
+}
+@media (max-width:503px) {
+  .by{
+    font-size: 15px;
+  }
+}
+@media (max-width:403px) {
+.by{
+  font-size: 12px;
+}
 }

@@ -7,21 +7,17 @@ padding-top: 600px;
     justify-content: space-between;
 }
 .about_wrapper h3{
-    font-size: 45px;
-    animation: moveGradient 6s linear infinite;
-    background: linear-gradient(90deg, #2a2828, #fff, #60f);
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 300% 100%;
-    color: #0000;;
-    display: inline-block;
-    font-family: var(--font-family);
+font-size: 40px;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
      margin-bottom: 20px;
-   
+     color:#21c998;
+ 
+  }
+  .about_wrapper span{
+    color:white;
   }
   .wiev_div{
     display: flex;
@@ -43,42 +39,8 @@ background-color: rgba(0, 0, 0, 0.5);
 cursor: pointer;
 box-shadow:5px 5px 5px 5px rgba(0, 0, 0, 0.616) ;
   }
-  @keyframes moveGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
   
-  .about_wrapper span{
-    animation: moveGradient 6s linear infinite;
-      background: linear-gradient(90deg, #2a2828, #fff, #60f);
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-size: 300% 100%;
-      color: #0000;;
-      display: inline-block;
-      font-family: var(--font-family);
-      font-weight: 600;
-      text-decoration: none;
-      text-transform: uppercase;
-      white-space: nowrap;
-  }
   .about h2{
-    animation: moveGradient 6s linear infinite;
-      background: linear-gradient(90deg, #2a2828, #fff, #60f);
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-size: 300% 100%;
-      color: #0000;;
-      font-family: var(--font-family);
-      font-weight: 600;
-      text-decoration: none;
       text-transform: uppercase;
       white-space: nowrap;
     font-size: 40px;

@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
 import "../styles/header.css"
-import burger from "../images/orgburger.png"
 import xbtn from "../images/xbbtn.png"
 
 function Header() {
@@ -38,13 +37,15 @@ function Header() {
       className={`header ${scrolled ? 'scrolled' : ''}`}
       ref={headerRef}
     >
+      <div className="container">
+        
       <div ref={modal} className="modal">
         <div onClick={closeModal} className="clos">
           <img src={xbtn} alt="" />
         </div>
         <div className="modal_div">
           <a href="#head">
-            <h3>Welcome to my portfolio</h3>
+            <h3>Welcome</h3>
           </a>
         </div>
         <div className="modal_contant">
@@ -67,7 +68,7 @@ function Header() {
       <div className="header_wrapper">
         <div className="header_logo">
           <a href="#head">
-            <h3>Welcome to my portfolio</h3>
+            <h3>Welcome</h3>
           </a>
         </div>
         <div className="header_contant">
@@ -78,8 +79,9 @@ function Header() {
             <a href="#conta"><li>Contact</li></a>
           </ul>
         </div>
-        <img onClick={openModal} className='burger' src={burger} alt="" />
+        <div onClick={openModal} className="burger"><div className="line"></div><div className="line"></div><div className="line"></div></div>
       </div>
+    </div>
     </div>
   )
 }
