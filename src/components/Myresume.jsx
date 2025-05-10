@@ -103,8 +103,10 @@ const Myresume = () => {
           .description {
             font-size: 0.95rem;
           }
+      
         }
       `}</style>
+        <h2 id='resum' className='resumh2'>My resume</h2>
       <main className="resume-container" role="main" aria-label="Resume Section">
         <section id="education-section" aria-labelledby="education-title">
           <h2 id="education-title">My Education</h2>
@@ -153,7 +155,7 @@ const Myresume = () => {
               <div className="date">2024-...</div>
               <div className="title">Freelance</div>
               <div className="description">
-                As a freelancer, I have done many projects with clients on online platforms.
+As a freelancer, I work with clients on online platforms
               </div>
             </div>
           </article>

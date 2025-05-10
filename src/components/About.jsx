@@ -2,9 +2,9 @@ import React from 'react'
 import "../styles/about.css"
 function About() {
   return (
-    <div id='about' className='about'>
+    <div className='about'>
       <div className="container">
-        <h2>About me</h2>
+        <h2 id='about'>About me</h2>
         <div className="about_wrapper">
             <div className="about_content">
                 <h3><span>Hello, I'm</span> <br />

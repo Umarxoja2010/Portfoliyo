@@ -62,6 +62,8 @@ function Header() {
             <a href="#conta">
               <li onClick={closeModal} ref={yashir}>Contact</li>
             </a>
+            <a onClick={closeModal} ref={yashir}  href="#resum"><li>Resume</li></a>
+
           </ul>
         </div>
       </div>
@@ -77,6 +79,7 @@ function Header() {
             <a href="#about"><li>About</li></a>
             <a href="#projec"><li>Projects</li></a>
             <a href="#conta"><li>Contact</li></a>
+            <a href="#resum"><li>Resume</li></a>
           </ul>
         </div>
         <div onClick={openModal} className="burger"><div className="line"></div><div className="line"></div><div className="line"></div></div>

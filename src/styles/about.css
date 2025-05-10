@@ -92,6 +92,12 @@ height: 300px;
   }
 
   }
+  @media (max-width:620px) {
+  .about{
+padding-top: 800px;
+
+  }
+  }
   @media (max-width:580px) {
   .about_wrapper{
     flex-direction: column;
@@ -107,4 +113,9 @@ margin-top: 50px;
     width: 100%;
     margin-bottom: 10px;
   }
+  }
+  @media (max-width:322px) {
+ .about{
+  padding-top: 700px;
+ }
   }

@@ -139,7 +139,7 @@ const Contact = () => {
 
   return (
     <div style={styles.body}>
-      <h1 style={styles.hh1}>Contact me</h1>
+      <h1 id='conta' style={styles.hh1}>Contact me</h1>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <main
           style={{
@@ -155,7 +155,7 @@ width: '90%',
           }}
           aria-label="Kontakt va fikr bildirish formasi"
         >
-          <section
+          <section 
             style={{
               ...styles.container,
     ...(siMoobile ? { textAlign: 'center', borderBottom: '1px solid #333', padding: "0" } : {}),

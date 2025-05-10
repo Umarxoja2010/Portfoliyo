@@ -12,9 +12,9 @@ function HomePage() {
     <div>
       <Hero/>
       <About/>
+      <Myresume/>
       <Projects/>
       <Skill/>
-      <Myresume/>
       <Contact/>
       <a href="#her">
       <img id="shakeImage" className='top' src={top} alt="" />
