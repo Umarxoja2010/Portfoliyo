@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import "../styles/header.css"
-import xbtn from "../images/xbbtn.png"
+import xbtn from "../images/btnclose.png"
 
 function Header() {
   const modal = useRef()
@@ -56,7 +56,7 @@ function Header() {
             <a href="#about">
               <li onClick={closeModal} ref={yashir}>About</li>
             </a>
-            <a href="#projec">
+            <a href="#project">
               <li onClick={closeModal} ref={yashir}>Projects</li>
             </a>
             <a href="#conta">
@@ -77,7 +77,7 @@ function Header() {
           <ul>
             <a href="#her"><li>Home</li></a>
             <a href="#about"><li>About</li></a>
-            <a href="#projec"><li>Projects</li></a>
+            <a href="#project"><li>Projects</li></a>
             <a href="#conta"><li>Contact</li></a>
             <a href="#resum"><li>Resume</li></a>
           </ul>

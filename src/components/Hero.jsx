@@ -18,7 +18,7 @@ function Hero() {
           <span className='  btnspanhero'>JavaScript</span>
           </div>
           <div>
-            <a href="#projec">
+            <a href="#project">
           <button >Project</button>
             </a>
             <a href="#conta">
