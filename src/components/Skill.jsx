@@ -26,7 +26,7 @@ const skills = [
   { name: 'Git', icon: <SiGit /> },
   { name: 'GitHub', icon: <SiGithub /> },
   { name: 'JavaScript', icon: <SiJavascript /> },
-  { name: 'TailwindCSS', icon: <SiTailwindcss /> },
+  {  name:  'TailwindCSS', icon: <SiTailwindcss /> },
   { name: 'Redux', icon: <SiRedux /> },
 ];
 
