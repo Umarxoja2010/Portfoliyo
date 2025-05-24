@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/about.css"
+import rasmim from "../images/rasmim.jpg"
 function About() {
   return (
     <div className='about'>
@@ -15,13 +16,13 @@ function About() {
                   <a href="#project">
 <button>View projects</button>
                   </a>
-                  <a href="https://drive.google.com/file/d/1FhEIIyBD7twPJhGFipK_nkoZsGnekaRw/view?usp=drive_link">
+                  <a href="https://drive.google.com/file/d/1HeUtG-ZUuzj-8flhhwAnAqDwoBQ7YquG/view?usp=drive_link">
 <button>View CV</button>
                   </a>
                 </div>
             </div>
          <div className="about_img">
-          <img src="a" alt="" />
+          <img src={rasmim} alt="" />
          </div>
         </div>
       </div>
