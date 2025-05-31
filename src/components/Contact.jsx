@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from 'emailjs-com';
 
 const styles = {
   body: {
@@ -62,9 +63,6 @@ const styles = {
     color: '#4aa3ff',
     textDecoration: 'none',
   },
-  linkHover: {
-    textDecoration: 'underline',
-  },
   feedbackSection: {
     color: '#e0e0e0',
   },
@@ -119,18 +117,32 @@ const Contact = () => {
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (feedback.trim().length === 0) return;
-    setShowThankYou(true);
-    setFeedback('');
-    setTimeout(() => {
-      setShowThankYou(false);
-    }, 5000);
+
+    const templateParams = {
+      message: feedback,
+      from_name: 'Umarxoja Mamarasulov',  // Siz yoki foydalanuvchi nomi
+      reply_to: 'umarxojamamarasulov@gmail.com',  // Sizning email yoki foydalanuvchi emaili
+    };
+
+    emailjs.send(
+      'service_hbmbiss',      // EmailJS Service ID-ni shu yerga yozing
+      'template_ov920qc',     // Sizning Template ID (siz oldingiz)
+      templateParams,
+      '8uDruBM1zMlWqbJ6N'       // EmailJS Public Key yoki User ID
+    ).then(() => {
+      setShowThankYou(true);
+      setFeedback('');
+      setTimeout(() => setShowThankYou(false), 5000);
+    }, (error) => {
+      console.error('Email yuborishda xatolik:', error.text);
+      alert('Xatolik yuz berdi. Iltimos, qayta urinib ko‘ring.');
+    });
   };
 
   const isMobile = windowWidth < 700;
@@ -139,26 +151,20 @@ const Contact = () => {
 
   return (
     <div style={styles.body}>
-      <h1 id='conta' style={styles.hh1}>Contact me</h1>
+      <h1 id="conta" style={styles.hh1}>Contact me</h1>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <main
           style={{
             ...styles.wrapper,
-            ...(isMobile ? {  
-flexDirection: "column",
-width: '60%'
-            } : {}),
-            ...(isMoobile ? {  
-width: '90%',
-
-            } : {}),
+            ...(isMobile ? { flexDirection: 'column', width: '60%' } : {}),
+            ...(isMoobile ? { width: '90%' } : {}),
           }}
           aria-label="Kontakt va fikr bildirish formasi"
         >
-          <section 
+          <section
             style={{
               ...styles.container,
-    ...(siMoobile ? { textAlign: 'center', borderBottom: '1px solid #333', padding: "0" } : {}),
+              ...(siMoobile ? { textAlign: 'center', borderBottom: '1px solid #333', padding: '0' } : {}),
             }}
             aria-labelledby="contact-header"
           >
@@ -171,40 +177,22 @@ width: '90%',
               </div>
               <div style={styles.infoItem}>
                 <span style={styles.icon} aria-hidden="true">✉️</span>
-                <a
-                  href="mailto:umarxojamamarasulov@gmail.com"
-                  aria-label="Email yozish"
-                  style={styles.link}
-                >
+                <a href="mailto:umarxojamamarasulov@gmail.com" aria-label="Email yozish" style={styles.link}>
                   umarxojamamarasulov@gmail.com
                 </a>
               </div>
               <div style={styles.infoItem}>
                 <span style={styles.icon} aria-hidden="true">📞</span>
-                <a
-                  href="tel:+998970641310"
-                  aria-label="Phone number"
-                  style={styles.link}
-                >
+                <a href="tel:+998970641310" aria-label="Phone number" style={styles.link}>
                   +998 97 064 13 10
                 </a>
               </div>
             </div>
           </section>
-          <section
-            style={{
-              ...styles.container,
-              ...(isMobile ? { textAlign: 'center' } : {}),
-            }}
-            aria-labelledby="feedback-header"
-          >
-            <h2 id="feedback-header" style={{ ...styles.h2, color: '#4aa3ff' }}>comment</h2>
-            <form
-              id="feedback-form"
-              aria-describedby="feedback-desc"
-              onSubmit={handleSubmit}
-              style={styles.form}
-            >
+
+          <section style={{ ...styles.container, ...(isMobile ? { textAlign: 'center' } : {}) }} aria-labelledby="feedback-header">
+            <h2 id="feedback-header" style={{ ...styles.h2, color: '#4aa3ff' }}>Comment</h2>
+            <form id="feedback-form" aria-describedby="feedback-desc" onSubmit={handleSubmit} style={styles.form}>
               <label htmlFor="feedback-textarea" style={styles.label}>Your feedback</label>
               <textarea
                 id="feedback-textarea"
@@ -222,7 +210,7 @@ width: '90%',
                 type="submit"
                 style={{
                   ...styles.button,
-                  ...(isButtonHover ? { background: '#1a73e8' } : {}),
+                  ...(isButtonHover ? styles.buttonHover : {}),
                 }}
                 onMouseEnter={() => setIsButtonHover(true)}
                 onMouseLeave={() => setIsButtonHover(false)}
@@ -232,7 +220,6 @@ width: '90%',
               {showThankYou && (
                 <div
                   id="thank-you"
-                  className="thank-you-message"
                   role="alert"
                   aria-live="polite"
                   style={styles.thankYouMessage}
