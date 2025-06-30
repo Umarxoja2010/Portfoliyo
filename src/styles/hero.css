@@ -1,0 +1,105 @@
+.hero{
+display: block;
+padding-top: 120px;
+
+width: 100%;
+position: absolute;
+background-color: white !important;
+}
+
+  .hero_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero_left h1{
+    font-size: 65px;
+    text-transform: uppercase;
+     margin-bottom: 20px;
+   color:#21c998;
+text-align: start;
+  }
+  .hero_left div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero_right img:hover{
+    cursor: pointer;
+  }
+  .btnspanhero{
+    border-radius: 30px;
+    border: 0.5px solid green;
+    color: black;
+    font-size: 15px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: block;
+    cursor: pointer;
+  }
+  .btnspanhero:hover{
+    color: white;
+    background: linear-gradient(90deg, #21c998, #034747);
+
+  }
+  
+  .hero_left button{
+display: block;
+border-radius: 10px;
+border: 0.5px solid green;
+color: black;
+font-size: 15px;
+width: 100px;
+height: 40px;
+cursor: pointer;
+  }
+  .hero_left button:hover{
+    background: linear-gradient(90deg, #21c998, #034747);
+color: white;
+  }
+  .hero_left svg{
+    display: block;
+    border: 0.5px solid green;
+    border-radius: 10px;
+    font-size: 10px;
+    color: black;
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+.hero_left svg:hover {
+  background: linear-gradient(90deg, #21c998, #034747);
+  color: white;
+}
+.hero_left a{
+  text-decoration: none;
+}
+@media (max-width:850px) {
+  .hero h1{
+    font-size: 40px;
+  }
+}
+@media (max-width:740px) {
+.hero_right img{
+  width: 100%;
+}
+}
+@media (max-width:620px) {
+.hero_wrapper{
+  flex-direction: column;
+}
+.hero_left{
+  order: 5;
+}
+.hero_wrapper{
+  text-align: start;
+}
+}
+
+ 
+  

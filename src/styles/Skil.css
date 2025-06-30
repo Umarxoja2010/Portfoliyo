@@ -1,0 +1,89 @@
+.skil-section {
+    padding: 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .skil-section h2 {
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .skil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .skil-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    width: 200px;
+    transition: transform 0.2s ease-in-out;
+    cursor: default;
+  }
+  
+  .skil-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+  }
+  
+  .skil-icon {
+    font-size: 3rem;
+    color: #3b82f6; /* Tailwind blue-500 */
+    margin-bottom: 0.5rem;
+  }
+  
+  .skil-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  /* Kichik qurilmalarga moslashuvchanlik */
+  @media (max-width: 600px) {
+    .skil-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .skil-item {
+      width: 180px;
+      padding: 0.75rem;
+    }
+    .skil-icon {
+      font-size: 2.5rem;
+    }
+    .skil-name {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 450px) {
+  .skil-grid{
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+  }
+  .skil-item {
+    width: 140px;
+  }
+  }
+  @media (max-width: 370px) {
+    .skil-grid{
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  
+    }
+    .skil-item {
+      width: 100px;
+    }
+
+    
+  }

@@ -1,0 +1,206 @@
+.header{
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 10px 30px 10px  ;
+    background-color: white;
+}
+.header_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header_wrapper a{
+    text-decoration: none;
+}
+.header_logo  h3 {
+      text-transform: uppercase;
+font-size: 30px;
+font-family:'Times New Roman', Times, serif;
+color: black;
+}
+.header_logo a{
+    text-decoration: none !important;
+
+}
+.header_wrapper ul{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+color: white;
+
+}
+.header_wrapper ul a{
+    color: white;
+
+}
+.header_wrapper ul li{
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 300% 100%;
+    color: #0000;;
+    display: inline-block;
+    font-family: var(--font-family);
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: black;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2d3137;
+    z-index: 5;
+    transform: translateX(100%); /* Boshlang'ich holat: o‘ngdan tashqarida */
+    transition: transform 0.5s ease-in-out;
+    width: 60%;
+    display: block;
+  }
+  
+  .show {
+    transform: translateX(0); /* Ko‘rinadigan holat: o‘ngdan chiqib kiradi */
+  }
+  
+  
+  
+  
+  
+.clos img{
+    width: 30px;
+    height:30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+ right: 20px;
+ background-size: contain;
+ background-repeat: no-repeat;
+ filter: brightness(0) invert(1);
+}
+.clos ::before,
+.clos ::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  border-radius: 2px; /* Bu yerda yumaloqlik qo‘shilmoqda */
+  transform-origin: center;
+}
+
+.clos ::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.clos ::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal_contant ul  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+flex-direction: column;
+    gap: 20px; 
+    width: 100%;
+    margin-top: 100px;
+    list-style: none;
+    text-decoration: none;
+    
+}
+.modal_contant ul a li{
+font-size: 25px;
+color: white;
+cursor: pointer;
+}
+.modal_contant ul a{
+    text-decoration: none;
+
+}
+.modal_div a h3{
+      text-transform: uppercase;
+      white-space: nowrap;
+font-size: 25px;
+color: white;
+}
+.modal_div a{
+    text-decoration: none;
+
+}
+.burger{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+.modal_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.line {
+    background: black;
+    border-radius: 2px;
+    height: 3px;
+    margin-bottom: 8px;
+    pointer-events: none;
+    width: 30px;
+}
+@media (max-width:820px) {
+    .header_logo a h3{
+     font-size: 20px;   
+    }
+}
+@media (max-width:680px) {
+    .burger{
+        display: block;
+
+    }
+    .header_contant{
+        display: none;
+    }
+    .modal{
+        display: block;
+    }
+}
+@media (max-width:440px) {
+    .header_wrapper{
+        gap: 15px;
+    }
+    
+.header a h3{
+  width: 2px;
+display: block;
+}
+}
+/* Media Queries */
+@media (max-width: 1024px) {
+    .modal {
+      width: 50%; /* Kattaroq ekranlarda 50% eni */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modal {
+      width: 70%; /* Mobil ekranlarga moslashtirildi */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal {
+      width: 90%; /* Juda kichik ekranlar uchun modalni kengaytirish */
+    }
+  }
